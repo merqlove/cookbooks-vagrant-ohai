@@ -3,8 +3,8 @@
 
 Ohai.plugin(:Ipaddress) do
   provides 'ipaddress'
-  depends "#{os}::network"
-  collect_data(:network) do
+  depends "ipaddress", "network/interfaces"
+  collect_data(:default) do
     network['interfaces']['eth1']['addresses'].each do |ip, params|
       if params['family'] == ('inet')
         ipaddress ip
