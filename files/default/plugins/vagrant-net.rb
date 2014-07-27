@@ -2,7 +2,7 @@
 # borrowed from https://gist.github.com/2050259
 
 Ohai.plugin(:Ipaddress) do
-  provide 'ipaddress'
+  provides 'ipaddress'
   depends "#{os}::network"
   collect_data(:network) do
     network['interfaces']['eth1']['addresses'].each do |ip, params|
