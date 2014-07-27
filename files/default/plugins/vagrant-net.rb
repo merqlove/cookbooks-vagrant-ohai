@@ -1,7 +1,7 @@
 
 # borrowed from https://gist.github.com/2050259
 
-Ohai.plugin(:ipaddress) do
+Ohai.plugin(:Ipaddress) do
   provide 'ipaddress'
   depends "#{os}::network"
   collect_data(:network) do
