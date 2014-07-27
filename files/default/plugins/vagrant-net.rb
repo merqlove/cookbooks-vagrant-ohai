@@ -9,7 +9,7 @@ Ohai.plugin(:ipaddress) do
       if params['family'] == ('inet')
         ipaddress ip
       end
-    end"
+    end
   end
 end
 
